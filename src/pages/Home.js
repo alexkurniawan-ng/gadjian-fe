@@ -36,12 +36,20 @@ const Home = () => {
     margin: 20px;
     display: inline-block;
     cursor: pointer;
+    font-weight: 500;
+    ${props =>
+            props.disabled &&
+            css`
+        color: lightgrey;
+        cursor: default;
+        font-weight: normal;
+    `}
     `
 
 
     return (
         <Container>
-            <div className='d-flex'>
+            <div className='d-md-flex'  style={{backgroundColor: '#f6f6f6', padding: 10 }}>
                 {
                     currentDisplayedCard.length > 0 &&
                     renderCard()
@@ -49,17 +57,16 @@ const Home = () => {
             </div>
             <div style={{ textAlign: 'center' }}>
                 <NavButton
-                    onClick={() => { setCurrentCard(currentCard - 1) }}
-                // style={{ marginRight: 20, display: 'inline-block', cursor: 'pointer' }}
+                    onClick={() => { currentCard !== 1 && setCurrentCard(currentCard - 1) }}
+                    disabled={currentCard === 1 ? true : false}
                 >
-                    Previous Page
+                    &larr; Previous
                 </NavButton>
                 <NavButton
-                    onClick={() => { setCurrentCard(currentCard + 1) }}
-                    style={{ marginLeft: 10, display: 'inline-block', cursor: 'pointer' }}
-
+                    onClick={() => { currentCard !== maxPage && setCurrentCard(currentCard + 1) }}
+                    disabled={currentCard === maxPage ? true : false}
                 >
-                    Next Page
+                    Next Page &rarr;
                 </NavButton>
             </div>
         </Container>
