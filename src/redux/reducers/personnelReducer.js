@@ -1,14 +1,14 @@
 const INITIAL_STATE = {
-    users: []
+    personnel: []
 }
 
 export default (state = INITIAL_STATE, action ) => {
     switch (action.type) {
-        case 'GET_USERS':
+        case 'GET_PERSONNEL':
             // console.log('getUser Reducer: ', action.payload)
             return {
                 ...state,
-                users: action.payload
+                personnel: action.payload
             };
 
         default:

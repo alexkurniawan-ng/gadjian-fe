@@ -1,1 +1,1 @@
-export const API_URL = 'xxxxx';
+export const API_URL = 'https://randomuser.me';

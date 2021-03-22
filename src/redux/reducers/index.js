@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import UserReducer from './userReducer';
+import PersonnelReducer from './personnelReducer';
 
 export const Reducer = combineReducers({
-    UserReducer
+    PersonnelReducer
 })
