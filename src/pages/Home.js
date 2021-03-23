@@ -85,7 +85,7 @@ const Home = () => {
     `;
     const TitlePersonnel = styled.p`
         font-weight: bold; 
-        font-size: 30px; 
+        font-size: 32px; 
         color: #34c9c9;
     `;
     const ListPersonnel = styled.p`
@@ -144,7 +144,7 @@ const Home = () => {
                     </div>
                     <div style={{ backgroundColor: '#f6f6f6', padding: 15 }}>
                         <div className='d-md-flex' style={{ backgroundColor: 'white', margin: 15, borderRadius: 5, padding: 20 }}>
-                            <div style={{ flex: 1 }} >
+                            <div style={{ flex: 1, textAlign: 'left'}} >
                                 <TitlePersonnel>PERSONNEL LIST</TitlePersonnel>
                                 <ListPersonnel>List of all personnels</ListPersonnel>
                             </div>
