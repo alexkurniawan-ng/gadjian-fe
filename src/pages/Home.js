@@ -104,7 +104,7 @@ const Home = () => {
 
     const renderCard = () => {
         return currentDisplayedCard.map((item, index) => {
-            return <PersonnelCard key={index} itemDisplay={itemDisplay}>{item}</PersonnelCard>
+            return <PersonnelCard key={index}>{item}</PersonnelCard>
         })
     }
 
@@ -113,9 +113,9 @@ const Home = () => {
         <Container fluid>
             <Row>
                 <Col md={2}>
-                    <Navbar vertical light expand='md' style={{ flexDirection: 'column', marginTop: -30 }}>
-                        <NavbarToggler onClick={toggle} />
-                        <NavbarBrand><img src={logo} alt='logo' height='120' /></NavbarBrand>
+                    <Navbar vertical light expand='md' style={{ flexDirection: itemDisplay ? 'column' : 'row', justifyContent: itemDisplay ? 'normal' : 'left', marginTop: -30 }}>
+                        <NavbarToggler onClick={toggle} style={{marginTop: 20}} />
+                        <NavbarBrand><img src={logo} alt='logo' height='120' style={{marginLeft: 10}} /></NavbarBrand>
                         <Collapse isOpen={isOpen} navbar vertical>
                             <Nav vertical>
                                 <NavItem>
@@ -132,7 +132,7 @@ const Home = () => {
                     </Navbar>
                 </Col>
 
-                <Col md={10}>
+                <Col md={10} style={{ textAlign: 'right', top: itemDisplay ?  'none' : -110 }}>
                     <div style={{ textAlign: 'right' }}>
                         {
                             personnel.length > 0 &&
