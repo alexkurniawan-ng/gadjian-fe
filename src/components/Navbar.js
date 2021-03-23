@@ -10,10 +10,10 @@ const NavbarComp = () => {
 
     return (
         <Container>
-            <Navbar light expand='md'>
+            <Navbar vertical light expand='lg'>
                 <NavbarToggler onClick={toggle} />
-                <NavbarBrand><img src={logo} alt='logo' height='75' /></NavbarBrand>
-                <Collapse isOpen={isOpen} navbar>
+                <NavbarBrand><img src={logo} alt='logo' height='120' /></NavbarBrand>
+                <Collapse isOpen={isOpen} navbar vertical>
                     <Nav vertical>
                         <NavItem>
                             <NavLink href='/'>Hallo, Gadjian User</NavLink>
@@ -23,11 +23,17 @@ const NavbarComp = () => {
             </Navbar>
 
             {/* <Collapse isOpen={isOpen} > */}
-                <Nav vertical expand="md">
+                {/* <Nav vertical expand="md">
                     <NavItem>
-                        <NavLink href='/'>test</NavLink>
+                        <NavLink href='/'>Beranda</NavLink>
                     </NavItem>
-                </Nav>
+                    <NavItem>
+                        <NavLink href='/'>Personnel List</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href='/'>Daily Attendance</NavLink>
+                    </NavItem>
+                </Nav> */}
             {/* </Collapse> */}
         </Container>
     )

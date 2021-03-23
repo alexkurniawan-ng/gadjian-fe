@@ -8,10 +8,10 @@ const App = (props) => {
 
   return (
     <div>
-      <NavbarComp/>
-      <Switch>
+      {/* <NavbarComp/> */}
+      {/* <Switch> */}
         <Route path='/' component={Home} exact />
-      </Switch>
+      {/* </Switch> */}
     </div>
   )
 }
