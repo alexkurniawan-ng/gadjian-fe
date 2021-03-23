@@ -112,8 +112,8 @@ const Home = () => {
     return (
         <Container fluid>
             <Row>
-                <Col md={2}>
-                    <Navbar vertical light expand='md' style={{ flexDirection: itemDisplay ? 'column' : 'row', justifyContent: itemDisplay ? 'normal' : 'left', marginTop: -30 }}>
+                <Col lg={2}>
+                    <Navbar vertical light expand='lg' style={{ flexDirection: itemDisplay ? 'column' : 'row', justifyContent: itemDisplay ? 'normal' : 'left', marginTop: -30 }}>
                         <NavbarToggler onClick={toggle} style={{marginTop: 20}} />
                         <NavbarBrand><img src={logo} alt='logo' height='120' style={{marginLeft: 10}} /></NavbarBrand>
                         <Collapse isOpen={isOpen} navbar vertical>
@@ -132,7 +132,7 @@ const Home = () => {
                     </Navbar>
                 </Col>
 
-                <Col md={10} style={{ textAlign: 'right', top: itemDisplay ?  'none' : -110 }}>
+                <Col lg={10} style={{  top: itemDisplay ?  'none' : -110 }}>
                     <div style={{ textAlign: 'right' }}>
                         {
                             personnel.length > 0 &&
@@ -153,7 +153,7 @@ const Home = () => {
                                 <ButtonPlus width={itemDisplay ? '20%' : '100%'}>ADD PERSONNEL ➕</ButtonPlus>
                             </div>
                         </div>
-                        <div className='d-md-flex'>
+                        <div className='d-lg-flex'>
                             {
                                 currentDisplayedCard.length > 0 &&
                                 renderCard()
